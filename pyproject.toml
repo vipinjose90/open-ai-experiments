@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "open-ai-experiments"
+version = "0.1.0"
+description = ""
+authors = ["Sam"]
+packages = [{include = "packing-advice"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.54.0"
+
+[tool.poetry.scripts]
+packing-advice = "packing-advice.advice-from-openai:main"
+create-image = "packing-advice.create-image:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
